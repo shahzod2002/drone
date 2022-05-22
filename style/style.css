@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 200vh;
+    overflow: hidden;
+}
+
+.drone {
+    position: absolute;
+    height: 369px;
+    width: 369px;
+    transform: translate(-50%, -50%) scale(20%);
+    transition: 2s ease;
+}
+
+img {
+    position: absolute;
+}
+
+.propeller:nth-child(1) {
+    left: -18%;
+    top: -18%;
+}
+
+.propeller:nth-child(2) {
+    right: -18%;
+    top: -18%;
+}
+
+.propeller:nth-child(3) {
+    left: -18%;
+    bottom: -18%;
+}
+
+.propeller:nth-child(4) {
+    right: -18%;
+    bottom: -18%;
+}
+
+.propeller {
+    animation: rotation 0.1s infinite linear;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
